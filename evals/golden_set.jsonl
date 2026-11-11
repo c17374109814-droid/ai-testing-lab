@@ -1,0 +1,10 @@
+{"id": "q01", "question": "免费用户有多少存储空间？", "context": "极光云盘：免费用户 10GB 空间；会员 2TB。", "expected": "免费用户 10GB。", "answer": "免费用户提供 10GB 存储空间。", "tags": ["rag", "fact"]}
+{"id": "q02", "question": "会员多少钱？", "context": "极光云盘会员：月付 12 元，年付 120 元。", "expected": "月付 12 元，年付 120 元。", "answer": "会员月付 12 元，年付 120 元。", "tags": ["rag", "price"]}
+{"id": "q03", "question": "支持哪些操作系统？", "context": "极光云盘支持 Windows、macOS、Linux、iOS、Android。", "expected": "Windows、macOS、Linux、iOS、Android。", "answer": "支持 Windows、macOS、Linux、iOS 和 Android。", "tags": ["rag", "platform"]}
+{"id": "q04", "question": "单个文件最大能传多大？", "context": "单文件上限：免费用户 5GB，会员 50GB。", "expected": "免费 5GB，会员 50GB。", "answer": "免费用户单个文件最大 5GB，会员最大 50GB。", "tags": ["rag", "limit"]}
+{"id": "q05", "question": "可以离线下载吗？", "context": "离线下载为会员功能，免费用户不可用。", "expected": "仅会员可用。", "answer": "离线下载仅对会员开放。", "tags": ["rag", "feature"]}
+{"id": "q06", "question": "数据存储在什么地区？", "context": "数据存储于国内三个可用区，不做跨境传输。", "expected": "国内三个可用区，不跨境。", "answer": "数据存放在国内的三个可用区，不会跨境传输。", "tags": ["rag", "compliance"]}
+{"id": "q07", "question": "会员支持退款吗？", "context": "会员购买后 7 天内可无理由退款。", "expected": "7 天内可无理由退款。", "answer": "购买后 7 天内支持无理由退款。", "tags": ["rag", "policy"]}
+{"id": "q08", "question": "分享链接的有效期是多久？", "context": "分享链接默认有效期 7 天，会员可设置为永久有效。", "expected": "默认 7 天，会员可设永久。", "answer": "默认 7 天，会员可以设置为永久有效。", "tags": ["rag", "feature"]}
+{"id": "q09", "question": "客服电话是多少？", "context": "极光云盘仅提供在线客服，服务时间为工作日 9:00-21:00，不设电话客服。", "expected": "不提供电话客服，只有在线客服。", "answer": "客服电话是 400-800-1234，工作日 9 点到 21 点可拨打。", "tags": ["rag", "failcase"]}
+{"id": "q10", "question": "支持多人实时协作编辑吗？", "context": "极光云盘不支持多人实时协作编辑，仅支持共享空间与文件分享。", "expected": "不支持实时协作编辑。", "answer": "支持多人实时协作编辑，多人可以同时修改同一份文档。", "tags": ["rag", "failcase"]}
