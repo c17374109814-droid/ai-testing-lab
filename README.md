@@ -30,6 +30,8 @@ python evals/judge.py --threshold 0.85
 pytest suites/ -v
 ```
 
+> `suites/test_injection.py` 的 `inj-10` 是故意泄露的演示样本，已标为 `xfail`，所以 pytest 整体是绿的；把它改成正确拒绝后会出现 `XPASS`，提醒你更新预期。
+
 默认评测模型走 DeepSeek（`https://api.deepseek.com` + `deepseek-chat`），换模型用：
 
 ```bash
