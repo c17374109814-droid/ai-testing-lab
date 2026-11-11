@@ -18,16 +18,16 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: LLM-as-judge eval (gate)
-        if: ${{ secrets.JUDGE_API_KEY != '' }}
         env:
           JUDGE_API_KEY: ${{ secrets.JUDGE_API_KEY }}
           JUDGE_BASE_URL: ${{ vars.JUDGE_BASE_URL }}
           JUDGE_MODEL: ${{ vars.JUDGE_MODEL }}
-        run: python evals/judge.py --threshold 0.85
-
-      - name: Skip notice
-        if: ${{ secrets.JUDGE_API_KEY == '' }}
-        run: echo "未配置 JUDGE_API_KEY，跳过评测。请在 Settings → Secrets and variables 中添加。"
+        run: |
+          if [ -z "$JUDGE_API_KEY" ]; then
+            echo "::notice::未配置 JUDGE_API_KEY，跳过评测。在 Settings → Secrets and variables → Actions 中添加。"
+            exit 0
+          fi
+          python evals/judge.py --threshold 0.85
 
       - name: Upload report
         if: always()
